@@ -25,7 +25,7 @@ const NewsHeader = () => {
     setCurrentDate(date.toLocaleDateString('id-ID', options));
   }, []);
 
-  // Toggle theme
+  // Toggle theme to dark and light
   const toggleTheme = () => {
     const newTheme = theme === "light" ? "dark" : "light";
 
