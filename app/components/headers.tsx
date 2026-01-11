@@ -11,7 +11,7 @@ const NewsHeader = () => {
   const [theme, setTheme] = useState("light");
   const [currentDate, setCurrentDate] = useState('');
 
-  // Get current date for left header
+  // Get current date for left header and format it to Indonesian
   useEffect(() => {
     setMounted(true);
     const date = new Date();
