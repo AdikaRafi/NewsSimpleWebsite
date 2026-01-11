@@ -1,122 +1,82 @@
-# The Daily News
+# Hi — I'm Adika Rafi 👋
+**Junior Full-Stack Developer** • Indonesia  
+Simple projects created from the heart — building clean, useful web experiences with Next.js, TypeScript, Tailwind, and practical backends.
 
-![The Daily News Banner](docs/assets/dark-mode.png)
+[For Documentation in Indonesian](./README.id.md)
+---
 
-A modern, responsive news portal built with **Next.js 15+**, **Tailwind CSS v4**, and **TypeScript**. Focuses on a clean reading experience, dark mode support, and seamless performance.
-
-## 🚀 Features
-
-- **Modern Tech Stack**: Built on the bleeding edge with Next.js App Router and Tailwind CSS v4.
-- **Dark Mode Support**: Fully integrated dark mode with smooth transitions and specific contrast optimizations.
-- **Responsive Design**: Crafted to look great on mobile, tablet, and desktop screens.
-- **Interactive UI**: Glassmorphism headers, subtle hover effects, and skeleton loading states.
-- **Clean Typography**: Uses _Inter_ for UI and _Playfair Display_ for headlines to mimic a premium editorial feel.
-
-## 🛠️ Tech Stack
-
-- **Framework**: [Next.js 15](https://nextjs.org/) (App Router)
-- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Language**: TypeScript
-- **Icons**: [Lucide React](https://lucide.dev/), [React Icons](https://react-icons.github.io/react-icons/)
-- **Fonts**: Inter & Playfair Display (via `next/font`)
-
-## 📸 Screenshots
-
-### Dark Mode (Optimized)
-
-![Dark Mode](docs/assets/dark-mode.png)
-_Featuring corrected text contrast and background consistency._
-
-### Light Mode
-
-![Light Mode](docs/assets/light-mode.png)
-_Clean, minimal, and paper-like aesthetic._
-
-### Footer Design
-
-![Footer Dark Mode](docs/assets/footer-dark.png)
-_Fully themed footer with social links._
-
-## 📂 Project Structure
-
-```bash
-news-project/
-├── app/
-│   ├── api/             # Backend API routes for news data
-│   ├── components/      # Reusable UI components (Header, Footer, News Cards)
-│   ├── globals.css      # Global styles & Dark mode overrides
-│   ├── layout.tsx       # Root layout & Providers
-│   └── page.tsx         # Main entry point (Featured News)
-├── public/              # Static assets
-└── docs/                # Documentation & Screenshots
-```
-
-## ⚙️ Getting Started
-
-1.  **Clone the repository**
-
-    ```bash
-    git clone https://github.com/yourusername/news-project.git
-    cd news-project
-    ```
-
-2.  **Install dependencies**
-
-    ```bash
-    npm install
-    ```
-
-3.  **Run the development server**
-
-    ```bash
-    npm run dev
-    ```
-
-4.  **Open locally**
-    Visit [http://localhost:3000](http://localhost:3000) to see the app.
-
-## 🔌 API & Environment Setup
-
-This project uses **[NewsData.io](https://newsdata.io/)** to fetch the latest news. You will need an API key to run the project successfully.
-
-### 1. Get an API Key
-
-- Go to [NewsData.io](https://newsdata.io/) and create an account.
-- Navigate to your dashboard to find your **API Key**.
-
-### 2. Configure Environment Variables
-
-- Create a file named `.env` in the root directory (based on `.env.example`).
-- Add your API key:
-  ```env
-  NEWSIO_APIKEY=your_actual_api_key_here
-  ```
-
-### 3. Fetching Logic (`app/api/news_data.tsx`)
-
-- **Server-Side Fetching**: News data is fetched on the server using `fetch()`.
-- **Caching**: Requests are cached for **5 minutes** (`revalidate: 300`) to optimize performance and save API credits.
-- **Sanitization**: Helper functions automatically upgrade URLs to `https://` and filter out missing images.
-
-## 🎨 Customization Highlights
-
-### Dark Mode Overrides
-
-Since Tailwind v4 is relatively new, this project uses specific **CSS strategy overrides** in `globals.css` to ensure robust dark mode rendering for text and backgrounds, solving common variant specificity issues.
-
-```css
-/* Example from globals.css */
-html.dark footer {
-  background-color: #111827 !important;
-  border-color: #1f2937 !important;
-}
-```
-
-## 👥 Credits
-
-**Developer**: Adika Brahmana Rafi Sejati  
-**Role**: SoftSpoken Developer
+[![GitHub followers](https://img.shields.io/github/followers/AdikaRafi?label=Follow&style=social)](https://github.com/AdikaRafi)  
 
 ---
 
-_Created with Next.js and ❤️_
+## About
+I build simple, fast, maintainable web apps with a focus on developer ergonomics, accessibility, and pragmatic solutions. I enjoy turning small ideas into polished projects and learning new tools along the way.
+
+- 🔭 Current project: NewsSimpleWebsite — a lightweight news site built with Next.js & Tailwind  
+- 🌱 Learning: modern TypeScript patterns, backend integrations with Next JS
+- ⚡ Approach: heart-first projects — practical, testable, and accessible
+
+---
+
+## Tech Stack
+- Frontend: Next.js, React, Tailwind CSS, TypeScript, JavaScript  
+- Backend & Data: Next JS
+- Tooling & Deploy: Git, Vercel / Netlify, ESLint, Prettier
+
+---
+
+## Featured Projects
+
+| Project | Short description | Repo / Demo | Screenshots |
+|---|---|---:|---:|
+| NewsSimpleWebsite | Simple news website focused on speed and readability. Built with Next.js + Tailwind + TypeScript. | https://github.com/AdikaRafi/NewsSimpleWebsite | ![news-home](./screenshot/lm1.png) <br> ![news-article](./screenshot/lm2.png) <br> ![news-home](./screenshot/dm1.png) <br> ![news-article](./screenshot/dm2.png) |
+
+## Run locally & configure API keys
+
+Prerequisites:
+- Node.js 18+ (or compatible LTS)
+- npm or pnpm
+- An API key for the news provider used in the project (e.g., [NewsData Apikey](https://newsdata.io/) or another provider)
+
+Steps:
+1. Clone the repo  
+   git clone https://github.com/AdikaRafi/NewsSimpleWebsite.git  
+   cd NewsSimpleWebsite
+2. Install dependencies  
+   npm install
+3. Create environment file  
+   Copy .env.example to .env.local (or create `.env.local`)
+4. Configure required environment variables (example)
+   ```
+   NEWSIO_APIKEY=your_news_api_key_here
+   ```
+   - Keep secret keys out of commits. Use environment variables or a secrets manager in production.
+5. Run development server  
+   npm run dev  
+   Open http://localhost:3000
+6. Build for production  
+   npm run build  
+   npm run start (or deploy to Vercel/Netlify)
+
+Configuring API keys:
+- If you use [NewsData Apikey](https://newsdata.io/):
+  - Sign up and get an API key.
+  - Put the key in `NEWSIO_APIKEY` if used on client, otherwise store it server-side and proxy requests from API routes.
+- If the app makes client-side requests with an API key, be aware keys are public in the browser. Prefer server-side calls for private keys.
+- To reduce rate-limit issues, consider server caching or a small server-side proxy.
+
+Troubleshooting:
+- CORS/rate-limit errors: check the provider docs and verify your key and request quotas.
+
+---
+
+## Contact
+- Email: adikarafi2605@gmail.com  
+- GitHub: https://github.com/AdikaRafi  
+- Location: Indonesia
+
+Open to:
+- Open to freelance  
+- Open to collaborate
+
+---
