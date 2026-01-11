@@ -25,12 +25,17 @@ const NewsHeader = () => {
     setCurrentDate(date.toLocaleDateString('id-ID', options));
   }, []);
 
-  // Toggle theme
+  // Toggle theme to dark and light
   const toggleTheme = () => {
-    setTheme(theme === "light" ? "dark" : "light");
-    localStorage.setItem('theme', theme === "light" ? 'dark' : 'light');
-    document.documentElement.classList.toggle(theme === "light" ? "dark" : "light");
+    const newTheme = theme === "light" ? "dark" : "light";
+
+    setTheme(newTheme);
+    localStorage.setItem("theme", newTheme);
+
+    document.documentElement.classList.remove("light", "dark");
+    document.documentElement.classList.add(newTheme);
   };
+
 
 
   return (
