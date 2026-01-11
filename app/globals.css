@@ -1,26 +1,69 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  body {
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-full bg-gray-300 dark:bg-gray-700;
+  }
 }
+
+/* Fallback robust for Dark Mode if Tailwind Class variant is not working in v4 
+html.dark body {
+  background-color: #040b1e !important; /* gray-950 force 
+  color: #f3f4f6 !important; /* gray-100 force 
+}
+
+/* Force Main News Section to blend 
+html.dark section.bg-white {
+  background-color: transparent !important;
+}
+
+/* Force News Cards inside Main News to blend 
+html.dark a.group.bg-gray-50 {
+  background-color: transparent !important;
+  border-color: #1f2937 !important; /* gray-800 
+}
+
+/* Force text colors in dark mode to fix Tailwind v4 variant issues 
+html.dark .text-gray-900 {
+  color: #ffffff !important;
+}
+html.dark .text-gray-800 {
+  color: #f3f4f6 !important;
+}
+html.dark .text-gray-700 {
+  color: #d1d5db !important;
+}
+html.dark .text-gray-600,
+html.dark .text-gray-500 {
+  color: #9ca3af !important;
+}
+
+/* Force Footer to be dark in dark mode 
+html.dark footer {
+  background-color: #111827 !important; /* gray-900 
+  border-color: #1f2937 !important; /* gray-800 
+}
+
+html.dark header {
+  background-color: #111827 !important; /* gray-900 
+  border-color: #1f2937 !important; /* gray-800 
+}
+
+*/
