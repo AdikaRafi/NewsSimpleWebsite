@@ -3,6 +3,7 @@
 Simple projects created from the heart — building clean, useful web experiences with Next.js, TypeScript, Tailwind, and practical backends.
 
 [For Indonesia Documentation](./README.id.md)
+
 ---
 
 [![GitHub followers](https://img.shields.io/github/followers/AdikaRafi?label=Follow&style=social)](https://github.com/AdikaRafi)  
